@@ -1,106 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Footer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin: 10px;
-        }
-        .footer-section h3 {
-            border-bottom: 2px solid #fff;
-            padding-bottom: 5px;
-        }
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-section ul li {
-            margin: 5px 0;
-        }
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .media-icons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .media-icons i {
-            font-size: 24px;
-            color: white;
-        }
-        @media (max-width: 600px) {
-            .footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-    </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Footer</title>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pO4+F0I0R9zqOUyY+ef/9AZa4sy+exlG4VhXZhLEJ1x1xZcU3U0wEGIR1PjqFb5X2ceO6nqlrErXKj+pxUMy3g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 20px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .media-icons {
+      margin-top: 10px;
+    }
+
+    .media-icons a {
+      color: #ccc;
+      margin-right: 10px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .media-icons a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-section {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .media-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .media-icons a {
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <footer class="footer">
-        <div class="footer-section">
-            <h3>Home</h3>
-            <ul>
-                <li><a href="#">Homepage</a></li>
-            </ul>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Home Section -->
+      <div class="footer-section" id="home">
+        <h3>Home</h3>
+        <ul>
+          <li><a href="/">Homepage</a></li>
+          <li><a href="/news">Latest News</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- About Section -->
+      <div class="footer-section" id="about">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Story</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-section" id="links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div class="footer-section" id="services">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/web-development">Web Development</a></li>
+          <li><a href="/services/app-development">App Development</a></li>
+          <li><a href="/services/seo">SEO Optimization</a></li>
+          <li><a href="/services/consulting">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social Section -->
+      <div class="footer-section contact" id="contact">
+        <h3>Contact</h3>
+        <p>Phone: <a href="tel:8879887262">8879887262</a></p>
+        <p>
+          <a href="https://facebook.com/yourcompany" target="_blank">Social Media Page</a>
+        </p>
+        <div class="media-icons">
+          <a href="https://facebook.com/yourcompany" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/yourcompany" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://youtube.com/@yourcompany" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
         </div>
-        <div class="footer-section">
-            <h3>About</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Links</h3>
-            <ul>
-                <li><a href="#">Homepage</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">SEO Optimization</a></li>
-                <li><a href="#">Marketing</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p>Contact Number: 8879887262</p>
-        </div>
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="media-icons">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-youtube"></i>
-            </div>
-        </div>
-    </footer>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
